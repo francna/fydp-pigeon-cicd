@@ -10,10 +10,12 @@ COPY package*.json ./
 
 # Install any needed packages specified in package.json
 RUN npm install
-RUN npx prisma generate
 
 # Bundle the app source inside the Docker image 
 COPY . .
+
+RUN npx prisma generate
+
 
 # Make port 3000 available to the outside world
 RUN npm run build
