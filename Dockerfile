@@ -10,6 +10,7 @@ COPY package*.json ./
 
 # Install any needed packages specified in package.json
 RUN npm install
+RUN npx prisma generate
 
 # Bundle the app source inside the Docker image 
 COPY . .
