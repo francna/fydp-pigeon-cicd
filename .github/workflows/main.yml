@@ -45,4 +45,4 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: |
-          kubectl set image deployment/fydp-app-deployment next-app=${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.sha }} -n ${{ env.KUBE_NAMESPACE }}
+          kubectl set image deployment/fydp-app-deployment fydp-app=${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.sha }} -n ${{ env.KUBE_NAMESPACE }}
