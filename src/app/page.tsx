@@ -8,8 +8,9 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const data = await fetch("/api/test");
-      const _test = await data.text();
-      setTest(_test);
+      const _test = await data.json();
+      console.log(_test);
+      setTest(_test.text);
     })();
   }, []);
 
