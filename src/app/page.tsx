@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      <h1>Final CI CD test</h1>
+      <h1>hello world</h1>
     </main>
   )
 }
