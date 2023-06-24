@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const handler = (req: NextRequest) => {
+const handler = async (req: NextRequest) => {
+  await new Promise((resolve) => setTimeout(resolve, 20000));
+
   return NextResponse.json({ text: "Hello world!" });
 };
 
